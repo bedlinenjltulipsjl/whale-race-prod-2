@@ -1,0 +1,361 @@
+.border-gradient-title {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(91.76deg, #1575b5 0.77%, #168bd8 97.55%),
+    linear-gradient(
+      106.78deg,
+      rgba(68, 180, 241, 0.8) 0.48%,
+      rgba(36, 69, 106, 0.8) 99.52%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.border-gradient-faq {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-faq::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(
+      106.78deg,
+      rgba(68, 180, 241, 0.8) 0.48%,
+      rgba(36, 69, 106, 0.8) 99.52%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.border-gradient-money {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-money::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(
+      106.78deg,
+      rgba(68, 180, 241, 0.8) 0.48%,
+      rgba(36, 69, 106, 0.8) 99.52%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.border-gradient-top {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(180deg, #82aae1 0%, #80dfe3 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.border-gradient-top-first {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-top-first::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(0deg, #081117 8.82%, #f0cd13 315.69%) padding-box,
+    linear-gradient(90deg, #f9e262 0%, #f0cd13 100%);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.gradient-for-pos {
+  background: radial-gradient(
+      110.23% 82.81% at 50% 17.19%,
+      rgba(255, 255, 255, 0.098) 0%,
+      rgba(255, 255, 255, 0.038) 100%
+    ),
+    radial-gradient(
+      105.11% 170.6% at 105.11% -15.62%,
+      rgba(19, 229, 213, 0.5) 19.66%,
+      rgba(19, 229, 213, 0.06) 71.06%
+    ),
+    radial-gradient(
+      82.79% 104.69% at 20.17% -22.66%,
+      #1d52a0 0%,
+      rgba(29, 82, 160, 0.18) 100%
+    ),
+    radial-gradient(
+      58.24% 134.23% at 33.81% 109.38%,
+      rgba(102, 129, 226, 0.81) 0%,
+      rgba(102, 129, 226, 0) 95.37%
+    ),
+    linear-gradient(0deg, #eef9ff, #eef9ff),
+    linear-gradient(90deg, #f9e262 0%, #13f0e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-for-pos-first {
+  background: linear-gradient(90deg, #f9e262 0%, #f0cd13 100%),
+    radial-gradient(
+      110.23% 82.81% at 50% 17.19%,
+      rgba(255, 255, 255, 0.098) 0%,
+      rgba(255, 255, 255, 0.038) 100%
+    ),
+    radial-gradient(
+      105.11% 170.6% at 105.11% -15.62%,
+      rgba(19, 229, 213, 0.5) 19.66%,
+      rgba(19, 229, 213, 0.06) 71.06%
+    ),
+    radial-gradient(
+      82.79% 104.69% at 20.17% -22.66%,
+      #1d52a0 0%,
+      rgba(29, 82, 160, 0.18) 100%
+    ),
+    radial-gradient(
+      58.24% 134.23% at 33.81% 109.38%,
+      rgba(102, 129, 226, 0.81) 0%,
+      rgba(102, 129, 226, 0) 95.37%
+    ),
+    linear-gradient(0deg, #eef9ff, #eef9ff),
+    linear-gradient(90deg, #f9e262 0%, #13f0e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.top-user-icon {
+  width: 35px;
+  height: 35px;
+
+  background: radial-gradient(
+      110.23% 82.81% at 50% 17.19%,
+      rgba(255, 255, 255, 0.098) 0%,
+      rgba(255, 255, 255, 0.038) 100%
+    ),
+    radial-gradient(
+      105.11% 170.6% at 105.11% -15.62%,
+      rgba(19, 229, 213, 0.5) 19.66%,
+      rgba(19, 229, 213, 0.06) 71.06%
+    ),
+    radial-gradient(
+      82.79% 104.69% at 20.17% -22.66%,
+      #1d52a0 0%,
+      rgba(29, 82, 160, 0.18) 100%
+    ),
+    radial-gradient(
+      58.24% 134.23% at 33.81% 109.38%,
+      rgba(102, 129, 226, 0.81) 0%,
+      rgba(102, 129, 226, 0) 95.37%
+    ),
+    linear-gradient(0deg, #eef9ff, #eef9ff),
+    linear-gradient(90deg, #f9e262 0%, #13f0e3 100%);
+  border-radius: 10.5814px;
+}
+
+.top-user-icon-first {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(90deg, #f9e262 0%, #f0cd13 100%);
+  border-radius: 10.5814px;
+}
+
+.gradient-for-top-users-days {
+  background: linear-gradient(100.04deg, #209bed 3.5%, #48c0ff 89.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.button-for-invite {
+  background:
+    radial-gradient(
+      110.23% 82.81% at 50% 17.19%,
+      rgba(255, 255, 255, 0.098) 0%,
+      rgba(255, 255, 255, 0.038) 100%
+    ),
+    radial-gradient(
+        105.11% 170.6% at 105.11% -15.62%,
+        rgba(19, 229, 213, 0.5) 19.66%,
+        rgba(19, 229, 213, 0.06) 71.06%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        82.79% 104.69% at 20.17% -22.66%,
+        #1d52a0 0%,
+        rgba(29, 82, 160, 0.18) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        58.24% 134.23% at 33.81% 109.38%,
+        rgba(102, 129, 226, 0.81) 0%,
+        rgba(102, 129, 226, 0) 95.37%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #eef9ff;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+  border-radius: 48px;
+}
+
+.top-user-icon {
+  width: 35px;
+  height: 35px;
+
+  background: radial-gradient(
+      110.23% 82.81% at 50% 17.19%,
+      rgba(255, 255, 255, 0.098) 0%,
+      rgba(255, 255, 255, 0.038) 100%
+    ),
+    radial-gradient(
+      105.11% 170.6% at 105.11% -15.62%,
+      rgba(19, 229, 213, 0.5) 19.66%,
+      rgba(19, 229, 213, 0.06) 71.06%
+    ),
+    radial-gradient(
+      82.79% 104.69% at 20.17% -22.66%,
+      #1d52a0 0%,
+      rgba(29, 82, 160, 0.18) 100%
+    ),
+    radial-gradient(
+      58.24% 134.23% at 33.81% 109.38%,
+      rgba(102, 129, 226, 0.81) 0%,
+      rgba(102, 129, 226, 0) 95.37%
+    ),
+    linear-gradient(0deg, #eef9ff, #eef9ff),
+    linear-gradient(90deg, #f9e262 0%, #13f0e3 100%);
+  border-radius: 10.5814px;
+}
+
+.border-invite-friend {
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-invite-friend::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 69px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(180deg, #82aae1 0%, #80dfe3 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.border-gradient-switcher {
+  position: relative;
+  background-color: #081117;
+  z-index: 0;
+}
+
+.border-gradient-switcher::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 69px;
+  background:
+    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(180deg, #82aae1 0%, #80dfe3 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: -1;
+}
+
+.loading-top-gradient {
+  background: linear-gradient(
+    352.9deg,
+    #0093f4 5.24%,
+    rgba(6, 138, 225, 0.696) 32.26%,
+    rgba(21, 117, 181, 0) 94.12%
+  );
+}
+
+.loading-bot-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(104, 104, 104, 0) 0%,
+    rgba(28, 28, 28, 0.8) 55.9%,
+    #1c1c1c 100%
+  );
+}
+
+.loading-text-gradient {
+  background: linear-gradient(90deg, #f9e262 0%, #13f0e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.button-buy-gradient{
+  background: linear-gradient(to right,#77DCD6, #5FB6B0,#95E4C9);
+  filter: brightness(1.1);
+}
