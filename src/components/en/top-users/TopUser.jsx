@@ -57,10 +57,10 @@ export default function TopUser({ user, first }) {
       <div className="flex justify-between px-[20px] text-white/80 mt-[2px]">
         <div>
           <div className="text-[10px] font-['Gilroy-500'] text-center">
-            {LANG ? "Referrals count" : "Рефералы"}
+            {LANG ? "Invested" : "Инвестировано"}
           </div>
           <div className="text-[#82EB67] text-[14px] font-['Gilroy-700'] text-center">
-            {user.investedAmount}
+            {user.investedAmount.toFixed(2)} $
           </div>
         </div>
         <div>
