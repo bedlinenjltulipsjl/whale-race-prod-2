@@ -37,7 +37,7 @@ export default function Races() {
             <TbHandClick />
           </div>
         ) : (
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 text-[12px]">
             Как заработать?
             <TbHandClick />
           </div>
