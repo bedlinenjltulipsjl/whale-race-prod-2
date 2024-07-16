@@ -1,12 +1,9 @@
 import SmallCoinIcon from "../../icons/small-coin";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { useEffect, useState } from "react";
 import WebApp from "@twa-dev/sdk";
 import { RiLock2Fill } from "react-icons/ri";
 import SpecialWhale from "./SpecialWhale";
 import { FaExclamation } from "react-icons/fa";
-
-import { getPercent } from "../../../util/front/getPercent";
 
 import { LANG } from "../../../util/front/language-check";
 
@@ -19,6 +16,8 @@ import duration from "dayjs/plugin/duration";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "../../../util/back/requests";
 import { updateUser } from "../../../store/user-slice";
+import TimeLeft from "./TimeLeft";
+import WhaleProgress from "./WhaleProgress";
 
 dayjs.extend(utc);
 dayjs.extend(duration);
@@ -41,11 +40,6 @@ export default function Whale({ whale, number, id, onShowMsg }) {
     setTimeLeft(Math.ceil(diffInMinutes) + 1);
   }, [whale.unlockDate]);
 
-  // useEffect(() => {
-  //   if (whale.investModelStatus == "TIMELOCKED") {
-  //     gsap.fromTo(".text-time-left", { opacity: 0 }, { opacity: 1 });
-  //   }
-  // }, [whale]);
   useEffect(() => {
     if (timeLeft == 0) {
       const update = async () => {
@@ -65,16 +59,6 @@ export default function Whale({ whale, number, id, onShowMsg }) {
     }
   }, [timeLeft, dispatch, token]);
 
-  const percent = getPercent(
-    whale.cyclesCount,
-    whale.cyclesBeforeFinishedNumber,
-  );
-
-  const coinPercent = getPercent(
-    whale.receivedBonusAtCycle,
-    whale.cyclesBeforeFinishedNumber,
-  );
-
   if (whale.investModelStatus == "SPECIALS") {
     return <SpecialWhale whale={whale} number={number} />;
   }
@@ -83,12 +67,6 @@ export default function Whale({ whale, number, id, onShowMsg }) {
     setShowModal(true);
     WebApp.HapticFeedback.impactOccurred("light");
   };
-
-  function formatTime(minutes) {
-    const days = Math.floor(minutes / 1440);
-    const hours = Math.floor((minutes % 1440) / 60);
-    return `${String(days).padStart(2, "0")}${LANG ? "d" : "д"} ${String(hours).padStart(2, "0")}${LANG ? "h" : "ч"}`;
-  }
 
   return (
     <>
@@ -129,14 +107,7 @@ export default function Whale({ whale, number, id, onShowMsg }) {
             className={`${whale.investModelStatus == "TIMELOCKED" && "opacity-50"}`}
           />
           {whale.investModelStatus == "TIMELOCKED" && (
-            <div className="flex items-center flex-col bottom-[-7px] absolute z-1 w-[78%]">
-              <div className="text-[8px] bg-[#2a7ac3] px-1 py-[1px] rounded-xl">
-                {LANG ? "Open in:" : "Откр."}{" "}
-                <span className="text-[10px]">
-                  {!isNaN(timeLeft) ? formatTime(timeLeft) : "future"}
-                </span>
-              </div>
-            </div>
+            <TimeLeft timeLeft={timeLeft} />
           )}
         </div>
 
@@ -157,36 +128,7 @@ export default function Whale({ whale, number, id, onShowMsg }) {
               whale.investModelStatus == "FINISHED" ||
               whale.investModelStatus == "FROZEN" ||
               whale.investModelStatus == "JUSTBOUGHT") && (
-              <>
-                <div className="text-[6px] text-center">
-                  {LANG ? "Current fine fill" : "Текущее наполнение"}
-                </div>
-                <ProgressBar
-                  completed={percent}
-                  animateOnRender
-                  isLabelVisible={false}
-                  height="5px"
-                  borderRadius="33px"
-                  customLabel=" "
-                  bgColor={`${whale.investModelStatus !== "JUSTBOUGHT" ? "linear-gradient(90deg, #82A7E0 0%, #80E0E3 100%)" : "#808080"}`}
-                  baseBgColor="inherit"
-                  className="mt-[2px] border-[#2C2F3566] border-[1px] rounded-[33px] w-full"
-                />
-                {whale.isReceivedBonus && (
-                  <div className={`mt-[-7px] h-[7px] w-full relative`}>
-                    <div
-                      className={`absolute w-[7px] h-[7px] -translate-x-1/2`}
-                      style={{ left: coinPercent + "%" }}
-                    >
-                      <SmallCoinIcon />
-                    </div>
-                  </div>
-                )}
-
-                <div className="w-full text-end text-[11px] mt-[1px]">
-                  {percent} %
-                </div>
-              </>
+              <WhaleProgress whale={whale} />
             )}
 
             {(whale.investModelStatus == "AVAILABLE" ||
@@ -195,19 +137,8 @@ export default function Whale({ whale, number, id, onShowMsg }) {
                 {LANG ? "Buy" : "Купить"}
               </button>
             )}
-
-            {/* {moneyWhale && (
-              <button className="w-full text-[10px] button-buy-gradient text-black rounded-xl mt-[2px] shadow-md opacity-[.5]">
-                {LANG ? "Buy" : "Купить"}
-              </button>
-            )} */}
           </div>
         </div>
-        {/* {showStatus && (
-          <div className="absolute bottom-full w-[78%] text-[12px] left-0 text-center">
-            <Status status={whale.investModelStatus} />
-          </div>
-        )} */}
       </div>
 
       {showModal && (

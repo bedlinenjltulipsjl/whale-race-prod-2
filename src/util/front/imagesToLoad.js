@@ -18,4 +18,6 @@ export const imagesToLoad = [
   "/whales/special.png",
   "/main-bg.png",
   "/coin.png",
+  "/faqmodal1.png",
+  "/faqmodal2.jpg",
 ];

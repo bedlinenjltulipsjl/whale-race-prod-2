@@ -196,13 +196,6 @@ export default function Modal({ whale, onClose, onShowMsg, lostProfit }) {
                 )}
               </div>
             )}
-            {/* {whale.investModelStatus == "FROZEN" && (
-              <div>
-                {LANG
-                  ? "This level is temporarily frozen"
-                  : "Данный уровень временно заморожен"}
-              </div>
-            )} */}
             {whale.investModelStatus == "MONEYLOCKED" && (
               <div>
                 {LANG
