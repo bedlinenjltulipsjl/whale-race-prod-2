@@ -14,29 +14,41 @@ export default function InviteGift() {
 
   return (
     <div
-      className="border-invite-friend w-full relative flex p-[14px] rounded-[69px] items-center justify-center gap-[10px]"
+      className="border-invite-friend w-full relative flex p-[8px] rounded-[69px] items-center justify-center gap-[4px]"
       id="invite-gift-friends"
     >
       <img src="/icons/gift.png" alt="gift" className="w-[50px] h-[50px]" />
       <div className="text-[14px] text-center">
         <h3>
           {LANG ? (
-            <div>
-              Send your friends referral link to get up to{" "}
-              <span className="gradient-for-top-users-days text-[15px]">
-                {" "}
-                26%{" "}
-              </span>{" "}
-              of his earnings.
+            <div className="text-[12px] px-4">
+              Send an invitation link to a friend = get{" "}
+              <span className="gradient-for-top-users-days text-[14px]">
+                $0.7{" "}
+              </span>
+              instantly! of his earnings.
+              <div className="text-[11px]">
+                Also, you will receive up to{" "}
+                <span className="gradient-for-top-users-days text-[14px]">
+                  26%{" "}
+                </span>{" "}
+                profit from the turnover of your referrals.
+              </div>
             </div>
           ) : (
-            <div>
-              Отправьте друзьям ссылку и получайте
-              <span className="gradient-for-top-users-days text-[15px]">
-                {" "}
-                26%{" "}
-              </span>{" "}
-              от их заработка.
+            <div className="text-[12px] ">
+              Send an invitation link to a friend = get{" "}
+              <span className="gradient-for-top-users-days text-[12px]">
+                $0.7{" "}
+              </span>
+              instantly! of his earnings.
+              <div className="text-[11px]">
+                Also, you will receive up to{" "}
+                <span className="gradient-for-top-users-days text-[12px]">
+                  26%{" "}
+                </span>{" "}
+                profit from the turnover of your referrals.
+              </div>
             </div>
           )}
         </h3>
