@@ -17,8 +17,9 @@ export default function TransactionItem({ data }) {
         <div
           className={`w-full flex items-center justify-between px-[25px] py-[12px] border-[1px] border-gray-400 rounded-[56px] bg-[rgba(32,32,32,0.13)]
         ${data.transactionType == "INCOME" && data.incomeType == "MAIN" && "shadow-[0px_4px_5.5px_0px_#82EB67_inset]"}
+        ${data.transactionType == "INCOME" && data.incomeType == "REGISTRATION" && "shadow-[0px_4px_5.5px_0px_#70de64_inset]"}
         ${data.transactionType == "INCOME" && data.incomeType == "REFERRAL" && "shadow-[0px_4px_5.5px_0px_#64785f_inset]"}
-      ${data.transactionType == "INCOME" && data.incomeType == "ADMIN" && "shadow-[0px_4px_5.5px_0px_#ffff00_inset]"}
+         ${data.transactionType == "INCOME" && data.incomeType == "ADMIN" && "shadow-[0px_4px_5.5px_0px_#ffff00_inset]"}
          ${data.transactionType == "INCOME" && data.incomeType == "LOST" && "shadow-[0px_4px_5.5px_0px_#82EB67_inset] opacity-[.5]"}
         ${data.transactionType == "DEPOSIT" && "shadow-[0px_4px_5.5px_0px_#168BD8_inset]"}
         ${data.transactionType == "WITHDRAW" && "shadow-[0px_4px_5.5px_0px_#FF5C00_inset]"}
