@@ -98,5 +98,5 @@ main {
 
 
 .shadow-gold {
-  box-shadow: 0 1px 4px rgba(255, 215, 0, 0.6), 0 6px 20px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 1px 4px #7B1FA2, 0 6px 20px #7B1FA2;
 }
