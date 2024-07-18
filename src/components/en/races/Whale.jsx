@@ -85,7 +85,7 @@ export default function Whale({ whale, number, id, onShowMsg }) {
               </h3>
             </div>
           )}
-          {whale.trandingStatus == "FAST" && (
+          {whale.trendingStatus == "FAST" && (
             <div className="absolute top-[-10px] w-[78%] flex justify-center text-[10px]">
               <h3 className="bg-green-500 rounded-xl px-2 border-[1px] border-green-900 text-black font-['Gilroy-700']">
                 fast profit
