@@ -13,7 +13,7 @@
   border: 1px solid transparent;
   border-radius: 24px;
   background:
-    linear-gradient(#081117, #081117) padding-box,
+    linear-gradient(#081117, rgb(13, 31, 49)) padding-box,
     linear-gradient(91.76deg, #1575b5 0.77%, #168bd8 97.55%),
     linear-gradient(
       106.78deg,
